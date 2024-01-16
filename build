@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build --build-arg USER=$USER --build-arg USERID=$(id -u) --build-arg GROUPID=$(id -g) -t mytorch .

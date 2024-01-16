@@ -1,0 +1,20 @@
+name: mytorch
+channels:
+    - nvidia
+dependencies:
+    - datasets
+    - transformers
+    - evaluate
+    - pytorch::pytorch-cuda
+    - pytorch::pytorch
+    - accelerate
+
+    - matplotlib
+    - jupyterlab
+    - ipywidgets
+
+    - pandas
+    - scikit-learn
+
+    - black
+
