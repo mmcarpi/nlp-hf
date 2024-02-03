@@ -2,19 +2,32 @@ name: mytorch
 channels:
     - nvidia
 dependencies:
-    - datasets
-    - transformers
-    - evaluate
-    - pytorch::pytorch-cuda
-    - pytorch::pytorch
+    # Hugging Face
     - accelerate
+    - datasets
+    - evaluate
+    - transformers
 
-    - matplotlib
+    # Util
+    - pytorch::pytorch
+    - pytorch::pytorch-cuda
+
+    # Why not?
+    - conda-forge::jaxlib
+    - conda-forge::jax
+
+    # Notebooks
     - jupyterlab
     - ipywidgets
 
+    # Data analysis
+    - matplotlib
+
     - pandas
+    - polars
     - scikit-learn
 
+    # Development
+    - mypy
     - black
 
