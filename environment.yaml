@@ -3,14 +3,16 @@ channels:
     - nvidia
 dependencies:
     # Hugging Face
-    - accelerate
-    - datasets
-    - evaluate
-    - transformers
+    - conda-forge::accelerate
+    - conda-forge::datasets
+    - conda-forge::evaluate
+    - conda-forge::transformers
+    - huggingface::safetensors
 
     # Util
     - pytorch::pytorch
     - pytorch::pytorch-cuda
+    - conda-forge::lightning
 
     # Why not?
     - conda-forge::jaxlib
@@ -30,4 +32,12 @@ dependencies:
     # Development
     - mypy
     - black
+    - python-language-server
+    - pyls-black
+
+    # Only available with pip
+    - pip
+    - pip:
+        - bertviz
+        - ecco
 
