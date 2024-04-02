@@ -13,6 +13,7 @@ dependencies:
     - pytorch::pytorch
     - pytorch::pytorch-cuda
     - conda-forge::lightning
+    - conda-forge::numba
 
     # Why not?
     - conda-forge::jaxlib
@@ -28,6 +29,8 @@ dependencies:
     - pandas
     - polars
     - scikit-learn
+    - scipy
+    - numpy
 
     # Development
     - mypy
@@ -40,4 +43,5 @@ dependencies:
     - pip:
         - bertviz
         - ecco
+        - einops
 
