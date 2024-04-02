@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Setup miniforge
+FILE="$HOME/Miniforge3-$(uname)-$(uname -m).sh"
+EXECUTABLE="$HOME/miniforge3/bin/mamba"
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh" -O "$FILE"
+bash "$FILE" -b -u
+
+"$EXECUTABLE" init bash
+
+# install python dependecies
+"$EXECUTABLE" env create -f "./environment.yaml"
+
+# remove installation file
+rm "$FILE"
