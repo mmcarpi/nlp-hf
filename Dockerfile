@@ -5,6 +5,7 @@ ARG USERID
 ARG GROUPID
 
 ENV PYTHON_VERSION=3.9
+#Change for your time zone
 ENV TZ=America/Sao_Paulo
 
 ENV WD="/home/$USER"
@@ -28,6 +29,7 @@ RUN apt-get install -y --reinstall ca-certificates
 RUN apt-get clean
 
 # Setup miniforge
+# TODO: Use the script already created for this
 USER $USER
 RUN wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"\
       -O "$WD/Miniforge3-$(uname)-$(uname -m).sh"
@@ -38,7 +40,7 @@ RUN "$WD/miniforge3/bin/mamba" init bash
 COPY ./environment.yaml "$WD"
 # install python dependecies
 RUN "$WD/miniforge3/bin/mamba" env create -f "$WD/environment.yaml"
-RUN echo "mamba activate mytorch" >> ~/.bashrc
+RUN echo "mamba activate nlp-hf" >> ~/.bashrc
 
 USER $USER
 RUN mkdir -p "$WD/work"

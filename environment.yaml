@@ -1,4 +1,4 @@
-name: mytorch
+name: nlp-hf
 channels:
     - nvidia
 dependencies:
@@ -41,6 +41,7 @@ dependencies:
     # Only available with pip
     - pip
     - pip:
+        - lxml
         - bertviz
         - ecco
         - einops
