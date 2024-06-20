@@ -11,13 +11,13 @@ dependencies:
 
     # Util
     - pytorch::pytorch
-    - pytorch::pytorch-cuda
+    - pytorch::pytorch-cuda=12.1
     - conda-forge::lightning
     - conda-forge::numba
 
     # Why not?
-    - conda-forge::jaxlib
-    - conda-forge::jax
+    # - conda-forge::jaxlib
+    # - conda-forge::jax
 
     # Notebooks
     - jupyterlab
