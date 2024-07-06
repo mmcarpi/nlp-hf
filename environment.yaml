@@ -12,8 +12,8 @@ dependencies:
     # Util
     - pytorch::pytorch
     - pytorch::pytorch-cuda=12.1
-    - conda-forge::lightning
-    - conda-forge::numba
+    # - conda-forge::numba
+    - conda-forge::torchinfo
 
     # Why not?
     # - conda-forge::jaxlib
