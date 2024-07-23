@@ -9,7 +9,7 @@ dependencies:
     - conda-forge::transformers
     - huggingface::safetensors
 
-    # Util
+    # PyTorch
     - pytorch::pytorch
     - pytorch::pytorch-cuda=12.1
     # - conda-forge::numba
@@ -19,6 +19,11 @@ dependencies:
     # - conda-forge::jaxlib
     # - conda-forge::jax
 
+    # Other nlp tools
+    - spacy
+    - nltk
+    - tiktoken
+
     # Notebooks
     - jupyterlab
     - ipywidgets
@@ -26,11 +31,13 @@ dependencies:
     # Data analysis
     - matplotlib
 
-    - pandas
     - polars
     - scikit-learn
     - scipy
     - numpy
+
+    # Web
+    - requests
 
     # Development
     - mypy
@@ -42,5 +49,4 @@ dependencies:
     - pip
     - pip:
         - lxml
-        - einops
 
