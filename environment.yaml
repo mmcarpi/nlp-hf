@@ -22,6 +22,7 @@ dependencies:
     # Other nlp tools
     - spacy
     - nltk
+    - regex
     - tiktoken
 
     # Notebooks
