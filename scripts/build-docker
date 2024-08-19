@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-docker build --build-arg USER=$USER --build-arg USERID=$(id -u) --build-arg GROUPID=$(id -g) -t nlp-hf .
+docker build\
+       	--build-arg USER=$USER\
+       	--build-arg USERID=$(id -u)\
+       	--build-arg GROUPID=$(id -g)\
+	-t nlp-hf $1
